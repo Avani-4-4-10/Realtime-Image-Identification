@@ -26,7 +26,7 @@ function gotResult(error , result){
       document.getElementById("object_name").innerHTML= result[0].label
       document.getElementById("accuracy").innerHTML= result[0].confidence.toFixed(3)
 
-      var synth=window.SpeechSynthesisUtterance()
+      var synth=window.speechSynthesis
       var speak_data="The object identified is "+result[0].label
       var Utterthis=new SpeechSynthesisUtterance(speak_data)
       synth.speak(Utterthis)
